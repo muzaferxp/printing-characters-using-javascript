@@ -1,0 +1,44 @@
+
+var inp  = 8;
+
+function printW(inp){
+    for(x = 0; x<inp  ;  x++){
+        console.log(
+            "-".repeat(x) + 
+            "\\" + 
+            " ".repeat((inp -1  - x) * 2)  + 
+            "/" + 
+            " ".repeat(x  * 2 ) + 
+            "\\" + 
+            " ".repeat((inp - 1  -x)  * 2) + 
+            "/" + 
+            "-".repeat(x) 
+            )
+    }
+}
+
+function printA(inp){
+    for(x = 0; x < inp; x++){
+        var line =
+            "-".repeat(inp - x) + 
+            "/" ;
+            
+            if(x == inp / 2)
+                line += "-".repeat(inp )
+            else
+            line += " ".repeat(x * 2);
+           line += "\\";
+            line += "-".repeat(inp - x)
+            
+            console.log(line
+            
+            )
+    }
+}
+
+
+printW(inp)
+console.log("------------------------------------------------")
+printA(inp)
+
+
